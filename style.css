@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+* button {
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "aside content";
+    grid-template-rows: 10% 86%;
+    grid-template-columns: 20% 1fr;
+    /* height: 100vh; */
+}
+
+.header {
+    grid-area: header;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.content {
+    grid-area: content;
+}
+
+/* header */
+
+.header {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 8px rgba(153, 166, 191, 0.12);
+}
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    /* gap: 50px; */
+}
+
+.headerLogoBlock {
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+    gap: 5px;
+}
+.headerLogoBlock span {
+    color: #2C384C;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.menuIcon {
+    margin-right: 50px;
+}
+
+.headerSearchBlock {
+    position: relative;
+}
+
+.headerSearchBlock input {
+    background: #F5F7FA;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    width: 250px;
+}
+
+.headerSearchBlock img {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.asideEtherium {
+    background: #784FFE;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    margin: 30px 30px 15px 30px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.asideMenu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0 32px;
+}
+.asideMenu li {
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    gap: 15px;
+}
+.asideMenu li:first-child {
+    color: #784FFE;
+    background: rgba(120, 79, 254, 0.12);
+    border-radius: 8px; 
+}
+.asideMenu li:last-child {
+    margin-top: 30px;
+}
+
+/* content */
+.content {
+    background-color: #E5E5E5;
+    padding: 30px;
+}
+.overviewBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.overviewBlock button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #724BF2;
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+.contentContainer {
+    display: grid;
+    grid-template-areas:
+        "worth worth worth worth income income income income expenses expenses expenses expenses" 
+        "portofolio portofolio portofolio portofolio portofolio portofolio portofolio assets assets assets assets assets"
+        "transactions transactions transactions transactions transactions transactions transactions assets assets assets assets assets "
+    ;
+    gap: 30px;
+    /* height: 75vh; */
+}
+.contentContainer > div {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 35px 30px 40px 30px;
+}
+.worth  {
+    grid-area: worth;
+}
+.income {
+    grid-area: income;
+}
+.expenses {
+    grid-area: expenses;
+}
+.portofolio {
+    grid-area: portofolio;
+}
+.assets {
+    grid-area: assets;
+}
+.transactions {
+    grid-area: transactions;
+}
+.contentTitle {
+    color: #899BBE;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+.worthCountContainer {
+    height: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.worthCount {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.worthCount div{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.worthCount p {
+    color: #20BF6B;
+}
+.worthSend {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #724BF2;
+    border-radius: 12px;
+    padding: 10px 20px;
+    border: none;
+    color: #FFFFFF;
+    border: none;
+}
+.worthBuy {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #ECE6FF;
+    border-radius: 12px;
+    padding: 10px 20px;
+    border: none;
+}
+/* income */
+.greenText {
+    color: #20BF6B;
+}
+.redText {
+    color: #EB3B5A;
+}
+.incomeContainer {
+    display: flex;
+    gap: 5px;
+}
+.incomeContainer > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.expensesContainer {
+    display: flex;
+    gap: 5px;
+}
+.expensesContainer > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* potfolio */
+.portofolio {
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    grid-template-areas: 
+    "portfolioHeader portfolioHeader"   
+    "portfolioPrice portfolioGraph" 
+    ;
+}
+.portfolioHeader {
+    grid-area: portfolioHeader;
+    display: flex;
+    justify-content: space-between;
+}
+.portfolioHeader > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.portfolioHeader select{
+    background-color: #EFEBFF;
+    border-radius: 12px;
+    border: none;
+    padding: 5px;
+}
+.portfolioPrice {
+    grid-area: portfolioPrice;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #899BBE;
+}
+.portfolioPrice div {
+    position: relative;
+}
+.portfolioPrice div::after {
+    position: absolute;
+    padding-left: 20px;
+    bottom: 4px;
+    content: '....................................................................................';
+    letter-spacing: 3px;
+    width: 100%;
+}
+.portfolioGraph {
+    grid-area: portfolioGraph;
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    z-index: 9999;
+}
+.portfolioGraph div {
+    background-color: #724BF2;
+    position: relative;
+    width: 36px;
+}
+.portfolioGraph div::after {
+    position: absolute;
+    color: #899BBE;
+    
+    bottom: -20px;
+    left: 5px;
+}
+.jan {
+    height: 43px;
+}
+.jan::after {
+    content: "jan";
+}
+.feb {
+    height: 77px;
+}
+.feb::after {
+    content: "feb";
+}
+.mar {
+    height: 129px;
+}
+.mar::after {
+    content: "mar";
+    font-weight: bold;
+    color: black !important;
+}
+.apr {
+    height: 86px;
+}
+.apr::after {
+    content: "apr";
+}
+.may {
+    height: 18px;
+}
+.may::after {
+    content: "may";
+}
+.jun {
+    height: 64px;
+}
+.jun::after {
+    content: "jun";
+}
+.jul {
+    height: 86px;
+}
+.jul::after {
+    content: "jul";
+}
+.aug {
+    height: 113px;
+}
+.aug::after {
+    content: "aug";
+}
+.sep {
+    height: 104px;
+}
+.sep::after {
+    content: "sep";
+}
+.oct {
+    height: 57px;
+}
+.oct::after {
+    content: "oct";
+}
+/* Assets */
+
+.allAssets {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.allAssets h4 {
+    font-size: 20px;
+}
+.assetsContainer {
+    display: flex;
+    width: 100%;
+    gap: 10px;  
+    align-items: center;
+    margin-top: 10px;
+}
+.assetsChildren {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.title1 {
+    display: flex;
+    width: 100%; 
+    font-size: 10px; 
+    margin-top: 5px; 
+    color:#899BBE;
+}
+.price1 {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.price1 p {
+   color: #20BF6B;
+}
+.price2 {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.price2 p {
+    color: #EB3B5A;
+}
+.viewAll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.viewAll button {
+    background-color: #724BF2;
+    border-radius: 12px;
+    width: 285px;
+    height: 38px;
+    color: #FFFFFF;
+    margin-top: 5px;
+    border: none;
+}
+
+/* Transactions */
+.transactionsHeader {
+    grid-area: portfolioHeader;
+    display: flex;
+    justify-content: space-between;
+}
+.transactionsHeader > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.transactionsHeader select{
+    background-color: #EFEBFF;
+    border-radius: 12px;
+    border: none;
+    padding: 5px;
+}
+.william {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.williamEtherium {
+    background-color: #6334FE1F;
+    width: 146px;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#724BF2;
+}
